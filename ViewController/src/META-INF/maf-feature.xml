@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:features xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf">
+  <adfmf:feature id="com.oraclecorp.cxshop.facebook.FBLogin" name="FBLogin">
+    <adfmf:content id="com.oraclecorp.cxshop.facebook.FBLogin.1">
+      <adfmf:remoteURL connection="fblogin_con"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="com.oraclecorp.cxshop.facebook.CXShop" name="CXShop">
+    <adfmf:content id="com.oraclecorp.cxshop.facebook.CXShop.1">
+      <adfmf:amx file="com.oraclecorp.cxshop.facebook.CXShop/CXShop-task-flow.xml#CXShop-task-flow"/>
+    </adfmf:content>
+  </adfmf:feature>
+</adfmf:features>

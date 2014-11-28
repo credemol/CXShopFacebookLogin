@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.1.3.2.36" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.oraclecorp.cxshop.facebook.mobile" ClientType="Generic">
+  <pageMap>
+    <page path="/com.oraclecorp.cxshop.facebook.CXShop/cxshop-home.amx"
+          usageId="com_oraclecorp_cxshop_facebook_mobile_cxshop_homePageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_oraclecorp_cxshop_facebook_mobile_cxshop_homePageDef"
+          path="com.oraclecorp.cxshop.facebook.CXShop.cxshop_homePageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="RESTJSONBean" path="com.oraclecorp.cxshop.facebook.mobile.RESTJSONBean"/>
+  </dataControlUsages>
+</Application>

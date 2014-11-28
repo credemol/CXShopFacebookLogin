@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf"
+                   version="1.0" name="CXShopFB" id="com.archnal.mobile.BGFMafDemo"
+                   appControllerFolder="ApplicationController"
+                   listener-class="com.oraclecorp.cxshop.facebook.application.LifeCycleListenerImpl"
+                   urlScheme="cxshopfb">
+  <adfmf:deviceFeatureAccess>
+    <adfmf:deviceNetwork access="true" id="dn1"/>
+  </adfmf:deviceFeatureAccess>
+  <adfmf:featureReference id="com.oraclecorp.cxshop.facebook.FBLogin"/>
+  <adfmf:featureReference id="com.oraclecorp.cxshop.facebook.CXShop"/>
+  <adfmf:remoteURLWhiteList>
+    <adfmf:domain id="d1">graph.facebook.com</adfmf:domain>
+  </adfmf:remoteURLWhiteList>
+</adfmf:application>

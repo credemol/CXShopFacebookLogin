@@ -1,0 +1,22 @@
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+  <Reference name="fblogin_con" className="oracle.adf.model.connection.url.HttpURLConnection" xmlns="">
+    <Factory className="oracle.adf.model.connection.url.URLConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="fblogin_con">
+        <Contents>
+          <urlconnection name="fblogin_con" url="http://macbook.nicholas.com/openfb/index.html"/>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+  <Reference name="FB_GRAPH" className="oracle.adf.model.connection.url.HttpURLConnection" xmlns="">
+    <Factory className="oracle.adf.model.connection.url.URLConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="FB_GRAPH">
+        <Contents>
+          <urlconnection name="FB_GRAPH" url="https://graph.facebook.com"/>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+</References>

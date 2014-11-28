@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration" version="12.1.3.2.36" id="DataControls"
+                    Package="com.oraclecorp.cxshop.facebook.mobile">
+  <AdapterDataControl id="RESTJSONBean" FactoryClass="oracle.adf.model.adapter.bean.BeanDCFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDCDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="true" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="com.oraclecorp.cxshop.facebook.mobile.RESTJSONBean"
+                      BeanClass="com.oraclecorp.cxshop.facebook.mobile.RESTJSONBean"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <CreatableTypes>
+      <TypeInfo FullName="com.oraclecorp.cxshop.facebook.mobile.RESTJSONResponse"/>
+    </CreatableTypes>
+    <Source>
+      <bean-definition BeanClass="com.oraclecorp.cxshop.facebook.mobile.RESTJSONBean"
+                       DataControlHandler="oracle.adf.model.adapter.bean.DataFilterHandler" AccessMode="scrollable"
+                       EagerPersist="false" xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>

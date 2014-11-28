@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+  <amx:panelPage id="pp1">
+    <amx:facet name="header">
+      <amx:outputText value="Header" id="ot1"/>
+    </amx:facet>
+    <amx:facet name="primary">
+      <amx:commandButton id="cb1"/>
+    </amx:facet>
+    <amx:facet name="secondary">
+      <amx:commandButton id="cb2"/>
+    </amx:facet>
+    <amx:panelGroupLayout id="pgl1">
+      <amx:inputText label="access_token" id="it2" value="#{applicationScope.access_token}" rows="5"/>
+      <amx:inputText label="expires_in" id="it3" value="#{applicationScope.expires_in}"/>
+    </amx:panelGroupLayout>
+    <amx:panelFormLayout id="pfl1">
+      <amx:panelLabelAndMessage label="" id="plam1">
+
+        <amx:commandButton actionListener="#{bindings.loadData.execute}" text="GET MY INFO"
+                           disabled="#{!bindings.loadData.enabled}" id="cb4">
+          <!--                 
+          <amx:setPropertyListener id="spl1" from="#{applicationScope.access_token}"
+                                   to="#{bindings.accessToken.inputValue}"/>
+                                   -->
+        </amx:commandButton>
+      </amx:panelLabelAndMessage>
+      <amx:inputText value="#{applicationScope.requestURI}" label="REQUEST URI" id="it1"
+                     rows="5"/>
+
+      <amx:inputText value="#{bindings.jsonResponse.inputValue}" label="#{bindings.jsonResponse.hints.label}" id="it5"
+                     rows="5"/>
+      <amx:inputText value="#{bindings.accessToken.inputValue}" label="#{bindings.accessToken.hints.label}" id="it8"
+                     rows="5"/>
+      <amx:inputText value="#{bindings.id.inputValue}" label="#{bindings.id.hints.label}" id="it6"/>
+      <amx:inputText value="#{bindings.name.inputValue}" label="#{bindings.name.hints.label}" id="it7"/>
+      <amx:panelLabelAndMessage label="Image" id="plam2">
+        <amx:image id="i1" source="#{'http://graph.facebook.com/' + bindings.id.inputValue + '/picture?type=small'"/>
+      </amx:panelLabelAndMessage>
+    </amx:panelFormLayout>
+    
+  </amx:panelPage>
+</amx:view>
